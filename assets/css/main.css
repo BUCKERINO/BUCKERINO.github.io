@@ -2218,6 +2218,19 @@ input, select, textarea {
 
 			}
 
+		.image.fullsize {
+			border: 11px solid green;
+			z-index: 999;
+			cursor: zoom-out;
+			display: block;
+			width: 400px;
+			max-width: 400px;
+			height: 550px;
+			position: fixed;
+			left: 100px;
+			top: 30px;
+		}
+
 /* List */
 
 	ol {
@@ -2663,7 +2676,6 @@ input, select, textarea {
 				.button.next {
 					padding-right: 5em;
 				}
-
 			}
 
 		input[type="submit"].primary,
@@ -2747,12 +2759,12 @@ input, select, textarea {
 			background-repeat: no-repeat;
 			background-size: cover;
 			cursor: default;
-			height: 40vh;
-			max-height: 40em;
+			height: 75vh;
+			max-height: 75em;
 			min-height: 23em;
 			overflow: hidden;
 			position: relative;
-			width: 40%;
+			width: 50%;
 		}
 
 			.tiles article .image {
@@ -2826,8 +2838,8 @@ input, select, textarea {
 				opacity: 0;
 			}
 
-			.tiles article:nth-child(4n - 1), .tiles article:nth-child(4n - 2) {
-				width: 60%;
+			.tiles article:nth-child(1), .tiles article:nth-child(1) {
+				width: 100%;
 			}
 
 			.tiles article:nth-child(6n - 5):before {
@@ -3481,7 +3493,7 @@ input, select, textarea {
 				}
 
 		#banner.major {
-			height: 75vh;
+			height: 110vh;
 			min-height: 30em;
 			max-height: 50em;
 		}
@@ -3950,3 +3962,56 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
+
+		.project-subtitle {
+			font-family: inherit;
+			font-weight: bold;
+			padding:1px 5px 1px 5px;
+			background-color: rgb(90, 103, 226);
+			border-radius: 5px;
+		}
+
+		.project-box {
+			font-family: inherit;
+			font-weight: bold;
+			padding:5px;
+			background-color: rgb(0, 0, 0);
+			border-radius: 5px;
+		}
+
+		.trailer-player {
+			z-index: -100;
+			width: 100%;
+			height: 100%;
+		}
+
+		.trailer-overlay {
+			width: 100%;
+			height: 100%;
+			background-color: rgb(0, 0, 0);
+			opacity: 0.5f;
+		}
+
+		/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+  }
+  
+  /* Style the button used to pause/play the video */
+  #myBtn {
+	width: 200px;
+	font-size: 18px;
+	padding: 10px;
+	border: none;
+	background: #000;
+	color: #fff;
+	cursor: pointer;
+  }
+  
+  #myBtn:hover {
+	background: #ddd;
+	color: black;
+  }
