@@ -23,7 +23,8 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -1765,6 +1766,25 @@ input, select, textarea {
 
 /* Section/Article */
 
+	.text-center{
+		text-align: center;
+		margin-left: 300px;
+	}
+
+	.video-container{
+		display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	margin-top: 20px; /* Adjust margin as needed */
+		margin-bottom: 20px;
+	}
+
+	.custom-video {
+		width: 100%; /* Set the width of the video */
+		max-width: 1500px; /* Set a maximum width if needed */
+		height: auto; /* Maintain aspect ratio */
+	}
+
 	section.special, article.special {
 		text-align: center;
 	}
@@ -2759,7 +2779,7 @@ input, select, textarea {
 			background-repeat: no-repeat;
 			background-size: cover;
 			cursor: default;
-			height: 75vh;
+			height: 50vh;
 			max-height: 75em;
 			min-height: 23em;
 			overflow: hidden;
@@ -2840,22 +2860,23 @@ input, select, textarea {
 
 			.tiles article:nth-child(1), .tiles article:nth-child(1) {
 				width: 100%;
+				height: 70vh;
 			}
 
 			.tiles article:nth-child(6n - 5):before {
-				background-color: #6fc3df;
+				background-color: #28233d;
 			}
 
 			.tiles article:nth-child(6n - 4):before {
-				background-color: #8d82c4;
+				background-color: #28233d;
 			}
 
 			.tiles article:nth-child(6n - 3):before {
-				background-color: #ec8d81;
+				background-color: #28233d;
 			}
 
 			.tiles article:nth-child(6n - 2):before {
-				background-color: #e7b788;
+				background-color: #28233d;
 			}
 
 			.tiles article:nth-child(6n - 1):before {
