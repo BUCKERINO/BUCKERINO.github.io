@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/MyAwesomeStyle.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     </head>
     <body class="is-preload">
@@ -33,7 +34,7 @@
                             </h1>
                         </header>
                         <div class="video-container">
-                            <video autoplay muted loop src="videos/DoodleTrailer.mp4" alt data-position="center center" class="custom-video"></video>
+                            <video autoplay muted loop src="/videos/DoodleTrailer.mp4" alt data-position="center center" class="custom-video"></video>
                         </div>
                         <div class="content">
                             <p>Doodle dream School invasion is a topdown shooter where you have to kill monsters in order to escape the school.
@@ -41,6 +42,7 @@
                                 progress you have to kill all the monsters in the room and shoot down the door to go to the next room. Once you've
                                 found the room with the stairs you'll be able to go down a floor. You can find the exit of the school on the main floor
                                 but be careful because there is terible monster gaurding it.
+                                <a href="https://www.youtube.com/watch?v=Sk_1crBV_P0" target="_blank">Watch with audio.</a>
                             </p>
                         </div>    
                     </div>
@@ -51,6 +53,7 @@
                         <header class="major">
                             <h1>My contributions</h1>
                         </header>
+                        <!-- Gun -->
                         <header class="major">
                             <h2>The gun:</h2>
                         </header>
@@ -58,10 +61,10 @@
                             <a class="image">
                                 <div class="row">
                                     <div class="column">
-                                        <img src="gifs/GunUIAndSO's.gif" width="600"/>
+                                        <img src="gifs/DoodleDream/GunUIAndSO's.gif" width="600"/>
                                     </div>
                                     <div class="column">
-                                        <img src="images/GunScriptable.PNG" alt data-position="center center"/>
+                                        <img src="images/DoodleDream/GunScriptable.PNG" alt data-position="center center"/>
                                     </div>
                                 </div>
                             </a>
@@ -74,7 +77,7 @@
                                 <a href="https://gist.github.com/BUCKERINO/e2ca7c46bf6d7399443d04c8ec7c4578" target="_blank">Learn more</a>
                             </p>
                         </div>
-
+                        <!-- Breakable doors -->
                         <header class="major">
                             <h2>Breakable doors:</h2>
                         </header>
@@ -82,7 +85,7 @@
                             <a class="image">
                                 <div class="row">
                                     <div class="column">
-                                        <img src="gifs/BreakableDoor.gif" width="800"/>
+                                        <img src="gifs/DoodleDream/BreakableDoor.gif" width="800"/>
                                     </div>
                                 </div>
                             </a>
@@ -91,11 +94,12 @@
                             <p>
                                 We wanted more action in our game. So we thought it was a fun idea to shoot down the doors instead of opening a door.
                                 For this to I made an array with all the rigidbody's of the door pieces and the gave the door some health. When a
-                                bullet collides with the door the hp of the door goes down. When it hits 0, a foreach loop will add a force, a direction
-                                and a random torque value to all the rigidbody's of the door pieces.
+                                bullet collides with the door the hp of the door goes down. When the hp is down to zero, a foreach loop will add a force, a direction
+                                and a random torque to all the rigidbody's of the door pieces.
                                 <a href="https://gist.github.com/BUCKERINO/3d90f5686f9bf7b5917581752642c347" target="_blank">Learn more</a>
                             </p>
                         </div>
+                        <!-- Room detection -->
                         <header class="major">
                             <h2>Room detection:</h2>
                         </header>
@@ -103,10 +107,22 @@
                             <a class="image">
                                 <div class="row">
                                     <div class="column">
-                                        <img src=""
+                                        <img src="gifs/DoodleDream/RoomDetection.gif" width="700"/>
+                                    </div>
+                                    <div class="column">
+                                        <img src="Images/DoodleDream/RoomDetectionScript.png" alt data-position="center center"/>
                                     </div>
                                 </div>
                             </a>
+                        </div>
+                        <div class="content">
+                            <p>
+                                We had a problem where the enemy were able to immidiatly go towards the player when the game began. This was an issue because we dont want
+                                enemy's to attack the player when the player is not in the same room as the enemy's. To fix this I made a room detection. This made sure that
+                                the enemy's only started moving when the player was in the same room as the enemy's and it also turned on the lights to show that the room
+                                got activated.
+                                <a href="https://gist.github.com/BUCKERINO/a2cdf242f7199e51a3d84c8a76bcbd0d" target="_blank">Learn more</a>
+                            </p>
                         </div>
                     </div>
                 </section>
