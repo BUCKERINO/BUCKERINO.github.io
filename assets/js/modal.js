@@ -1,26 +1,20 @@
-// Get references to the button and modal
-const showModalBtn = document.getElementById('showModalBtn');
-const portfolioModal = document.getElementById('portfolioModal');
+const portfolioContainer = document.querySelector('.portfolio-items')
 
-// Function to show the modal
-function showModal() {
-    portfolioModal.style.display = 'block';
-}
+portfolioContainer.addEventListener("click", e =>{
+    //console.log(e)
+    //e.preventDefault()
 
-// Function to hide the modal
-function hideModal() {
-    portfolioModal.style.display = 'none';
-}
+    const modalToggle = e.target.closest(".portfolio-link")
+    //console.log(modalToggle)
 
-// Event listener for the button click
-showModalBtn.addEventListener('click', showModal);
+    if(!modalToggle) return
 
-// You might also want to close the modal when clicking the close button inside the modal
-portfolioModal.addEventListener('click', function(event) {
-    if (event.target.tagName === 'BUTTON' && event.target.classList.contains('btn-close')) {
-        hideModal();
-    }
-});
+    const modal = modalToggle.parentNode.nextElementSibling
+    const closeButton = modal.querySelector('.modal-close')
 
-// Initially hide the modal on page load
-hideModal();
+    modal.classList.add('is-open')
+
+    closeButton.addEventListener("click", _ => {
+        modal.classList.remove('is-open')
+    })
+})

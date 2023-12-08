@@ -8,6 +8,9 @@
 .p-text{
     
 }
+.portfolio-items{
+
+}
 
 /* Modal styles */
 .modal {
@@ -24,18 +27,19 @@
     border-radius: 3%;
 
     display: none;
+
+    &.is-open{
+      display: block;
+    }
   }
+  
  .modal-close{
     background: rgb(86, 80, 95);
     position: fixed;
-    text-align: center;
-    font-size:28px;
-    left: .5em;
-    top: 1.5em;
-    border: 0;
-    width: 2em;
-    height: 2em;
-    border-radius: 25%;
+    left: 1em;
+    top: 3.5em;
+    width: 1em;
+    border-radius: 15%;
     box-shadow: 0 0 5px rgba(black, .5);
  }
 
