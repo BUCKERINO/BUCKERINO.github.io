@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/MyAwesomeStyle.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -45,10 +46,10 @@
 							<span class="image" style="display: none;"> <img src="images/PlaceHolders/LogoPlaceholder.jpg" alt> </span>
 						</div>
 					</section>
-
 				<!-- Main -->
-					<div id="main">
+				
 
+					<div id="main">
 						<!-- One -->
 							<section id="one" class="tiles">
 								<article>
@@ -56,8 +57,9 @@
 										<img src="images/DoodleDream/doodle_dream_poster.png" alt="" />
 									</span>
 									<header class="major">
-										<h3><a href="#popup1" onclick="OpenPopUp()" class="link">Doodle Dream <br>
-																				School Invasion</a></h3>
+										<h3>
+											<button id="openModalBtn">Doodle Dream <br> School Invasion</button>
+										</h3>
 										<span class="project-subtitle">Unity3D · C# · PC · Alpha</span>
 										<p class="project-box">Doodle dream school invasion is a <br>
 											 					thirdperson top down shooter. <br>
@@ -67,7 +69,20 @@
 											</p>
 									</header>
 								</article>
-								<article>
+								<!-- Modal 1 -->
+								<div class="modal">
+									<a class="modal-close" href="">x</a>
+									<div class="modal-header">
+										<div class="modal-title-box">
+											<h2-title class="modal-title">Doodle Dream School Invasion</h2-title>
+											<p-text class="modal-subtitle"><br>Explanation</p-text>
+										</div>
+									</div>
+									<div class="modal-content">
+										<p>this is the content</p>
+									</div>
+								</div>
+								<!-- <article>
 									<span class="image">
 										<img src="images/SteamSky/SteamSkyBanner.png" alt="" />
 									</span>
@@ -93,7 +108,7 @@
 																while dodging obstacles</p>
 									</header>
 								</article>
-							</section>
+							</section> -->
 
 						<!-- Two -->
 							<section id="two">
@@ -124,13 +139,6 @@
 					</footer>
 
 			</div>
-
-			<!-- pop up windows-->
-			<nav id="popup1" class="popup">
-				<p> dit is de shit gewoon</p>
-				<a href="#popup1" class="close">close</a>
-			</nav>
-
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -139,16 +147,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
-			<script>
-				function OpenPopUp(){
-					document.getElementById("popup").style.display = "block";
-				}
-
-				function ClosePopUp{
-					document.getElementById("popup").style.display = "none";
-				}
-			</script>
-
+			<script src="assets/js/modal.js"></script>
 	</body>
 </html>
