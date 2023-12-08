@@ -1,0 +1,22 @@
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
+
+.popup{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
