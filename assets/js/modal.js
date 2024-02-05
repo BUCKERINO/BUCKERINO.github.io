@@ -2,7 +2,7 @@ const portfolioContainer = document.querySelector('.portfolio-items')
 
 portfolioContainer.addEventListener("click", e =>{
     //console.log(e)
-    //e.preventDefault()
+    e.preventDefault()
 
     const modalToggle = e.target.closest(".portfolio-link")
     //console.log(modalToggle)
@@ -30,7 +30,7 @@ portfolioContainer.addEventListener("click", e =>{
     })
 
     document.addEventListener('keydown', e =>{
-        if(e.keyCOde === 27){
+        if(e.keyCode === 27){
             modal.style.animation = 'modalOut 500ms forwards'
             modal.addEventListener('animationend', modalClose)
         }
