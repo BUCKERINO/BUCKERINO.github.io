@@ -39,6 +39,7 @@
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
 
     &.is-open{
       display: block;
@@ -89,21 +90,27 @@
     }
 }
 
+.modal-text {
+  margin-bottom: 60px; /* Adjust spacing between text and image */
+}
+
   .modal-content {
+    position: relative;
     font-size: 1.5rem;
     text-align: center;
-    width: 85%;
-    height: auto;
-    max-width: 100%;
+    max-height: 80%;
+    max-width: 85%;
     margin: 0 auto;
     padding-bottom: 2em;
   }
 
-  .modal-content img{
-    max-width: 100%;
-    max-height: 100%;
+  .modal-content img {
+    max-width: 100%; /* Adjust as needed */
+    max-height: 100vh; /* Adjust as needed */
     width: auto;
     height: auto;
+    margin: 0 auto; /* Center the image horizontally */
+    margin-bottom: 20px;
   }
 
   .modal-video{
@@ -114,6 +121,46 @@
     	margin-top: 20px; /* Adjust margin as needed */
 		margin-bottom: 20px;
   }
+
+  .moodal-img-container{
+    margin-top: auto;
+    position: absolute;
+    top: 90%;
+    bottom: 10px; /* Adjust bottom spacing */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .modal-button-container {
+    margin-top: auto;
+    position: absolute;
+    top: 205%;
+    bottom: 20%; /* Adjust bottom spacing */
+    left: 50%;
+    margin-bottom: -15%;
+    transform: translateX(-50%);
+}
+
+.modal-button {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 2px #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: 600;
+  height: 3.5em;
+  letter-spacing: 0.25em;
+  line-height: 3.5em;
+  padding: 0 1.75em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 
   @keyframes modalIn{
     0% {opacity: 0;}
@@ -127,7 +174,23 @@
 
   @media screen and (max-width: 600px) {
     .modal-content img {
-        width: 100%;
-        height: auto;
+        width: 95%;
     }
+
+    .modal-title{
+      font-size: 5vw;
+    }
+
+    .modal-button{
+      font-size: 4vw;
+    }
+}
+
+/* Ensure the title remains on a maximum of two lines */
+@media screen and (max-width: 450px) {
+  .modal-title {
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+  }
 }
