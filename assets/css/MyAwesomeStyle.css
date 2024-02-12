@@ -91,7 +91,7 @@
 }
 
 .modal-text {
-  margin-bottom: 60px; /* Adjust spacing between text and image */
+  margin-bottom: 0px; /* Adjust spacing between text and image */
 }
 
   .modal-content {
@@ -111,6 +111,7 @@
     height: auto;
     margin: 0 auto; /* Center the image horizontally */
     margin-bottom: 20px;
+    text-align: center;
   }
 
   .modal-video{
@@ -122,11 +123,11 @@
 		margin-bottom: 20px;
   }
 
-  .moodal-img-container{
-    margin-top: auto;
+  .modal-img-container{
+    text-align: center;
+    margin-top: 140px;
+    margin-bottom: 20px;
     position: absolute;
-    top: 90%;
-    bottom: 10px; /* Adjust bottom spacing */
     left: 50%;
     transform: translateX(-50%);
   }
@@ -134,10 +135,8 @@
   .modal-button-container {
     margin-top: auto;
     position: absolute;
-    top: 205%;
-    bottom: 20%; /* Adjust bottom spacing */
+    text-align: center;
     left: 50%;
-    margin-bottom: -15%;
     transform: translateX(-50%);
 }
 
@@ -151,7 +150,7 @@
   display: inline-block;
   font-size: 0.8em;
   font-weight: 600;
-  height: 3.5em;
+  height: 4em;
   letter-spacing: 0.25em;
   line-height: 3.5em;
   padding: 0 1.75em;
