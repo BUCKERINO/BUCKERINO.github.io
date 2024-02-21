@@ -8,188 +8,150 @@
 .p-text{
     
 }
-.portfolio-items{
 
+.portfolio-modal{
+  position: fixed;
+  z-index: 10;
+  top: 2em;
+  bottom: 2em;
+  left: 2em;
+  right: 2em;
+  background: rgb(3, 0, 26);
+  box-shadow: 0 0 0 3em rgba(black, 0.75);
+  overflow-y: scroll;
 }
 
-.overlay{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to control darkness */
-  z-index: 9999;
-  display: none;
+.modal-close{
+  position: absolute;
+  font-size: 60px;
+  top:-0.2em;
+  right: 0.5em;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+}
 
-  &.is-open{
-    display: block;
+.portfolio-header{
+  text-align: center;
+  padding: 2em 0;
+}
+
+.portfolio-title-box{
+  color: white;
+
+  .portfolio-title{
+    font-size: 3rem;
+    display: inline-block;
+
+    &::after{
+      content:'';
+      display: block;
+      height: 2px;
+      margin: .5em -1em;
+      background: white;
+      width: 132%;
+    }
   }
 }
 
-/* Modal styles */
-.modal {
+.portfolio-video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.portfolio-video-container iframe {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 85%;
-  height: 90%;
   transform: translate(-50%, -50%);
-  background-color: #441174;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  overflow-y: auto;
+  width: 100%;
+  height: 80%;
+}
 
-    &.is-open{
-      display: block;
-    }
+.portfolio-subtitle{
+  text-align: center;
+  font-size: 1.2rem;
+  font-style:bold;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.portfolio-content{
+  text-align: center;
+  width: 85%;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+@media (min-width: 40em) {
+  .content-item {
+      display: flex;
+      align-items: center;
   }
+
+  .img-pull-left {
+      width: 60%;
+      margin-right: 2em;
+      float: left;
+  }
+
+  .img-pull-right {
+      width: 60%;
+      margin-left: 2em;
+      float: right;
+  }
+
+  .img-pull-left img,
+  .img-pull-right img {
+      width: 100%; /* Ensure images take full width of their container */
+      height: auto; /* Maintain aspect ratio */
+      max-width: 100%; /* Ensure images don't exceed their container's width */
+      max-height: 100%; /* Ensure images don't exceed their container's height */
+      object-fit: cover; /* Ensure the entire image is visible */
+  }
+}
+
+@media (max-width :40em){
+  .img-pull-left img,
+    .img-pull-right img {
+        width: 80vw; /* 80% of viewport width */
+        max-width: 100%; /* Ensure images don't exceed their container's width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+.content-title{
+  font-size: 30px;
   
- .modal-close{
-  position: absolute;
-    font-size: 60px;
-    top: -0.2em;
-    right: 0.5em;
-    cursor: pointer;
-    color: #fff;
-    text-decoration: none;
- }
+  &::after{
+    content:'';
+      display: block;
+      height: 2px;
+      margin: .5em 0em;
+      background: white;
+      width: 100%;
+  }
+}
 
-.modal-header{
+.content-item{
+  padding: 8em 0;
+}
+
+.square-image {
+    width: 300px; /* Adjust size as needed */
+    height: 300px; /* Ensure square size */
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+.item-title{
+  font-size: 2rem;
   text-align: center;
-  padding: 0.5em 1em;
-  }
-
-.modal-title-box{
-    background: rgba(black, 0.75);
-    padding: 0.5em 2.5em 0 2.5em;
-    color: white;
-    width: 100%;
 }
 
-.modal-title{
-    font-size: 4em;
-    font-weight: 600;
-    display: inline-block;
-    text-align: center;
-    bottom: 0;
-}
-
-.modal-subtitle{
-    font-size: 2rem;
-    text-align: center;
-
-    &::after{
-        content:'';
-        display: block;
-        height: 1px;
-        margin: 1em 0;
-        background: white;
-        width: 100%;
-    }
-}
-
-.modal-text {
-  margin-bottom: 0px; /* Adjust spacing between text and image */
-}
-
-  .modal-content {
-    position: relative;
-    font-size: 1.5rem;
-    text-align: center;
-    max-height: 80%;
-    max-width: 85%;
-    margin: 0 auto;
-    padding-bottom: 2em;
-  }
-
-  .modal-content img {
-    max-width: 100%; /* Adjust as needed */
-    max-height: 100vh; /* Adjust as needed */
-    width: auto;
-    height: auto;
-    margin: 0 auto; /* Center the image horizontally */
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  .modal-video{
-    position: absolute;
-    display: flex;
-    	justify-content: center;
-    	align-items: center;
-    	margin-top: 20px; /* Adjust margin as needed */
-		margin-bottom: 20px;
-  }
-
-  .modal-img-container{
-    text-align: center;
-    margin-top: 140px;
-    margin-bottom: 20px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .modal-button-container {
-    margin-top: auto;
-    position: absolute;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.modal-button {
-  background-color: transparent;
-  border: 0;
-  border-radius: 0;
-  box-shadow: inset 0 0 0 2px #ffffff;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 0.8em;
-  font-weight: 600;
-  height: 4em;
-  letter-spacing: 0.25em;
-  line-height: 3.5em;
-  padding: 0 1.75em;
+.item-description{
   text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-
-  @keyframes modalIn{
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-  }
-
-  @keyframes modalOut{
-    0% {opacity: 1;}
-    100% {opacity: 0;}
-  }
-
-  @media screen and (max-width: 600px) {
-    .modal-content img {
-        width: 95%;
-    }
-
-    .modal-title{
-      font-size: 5vw;
-    }
-
-    .modal-button{
-      font-size: 4vw;
-    }
-}
-
-/* Ensure the title remains on a maximum of two lines */
-@media screen and (max-width: 450px) {
-  .modal-title {
-    white-space: nowrap; /* Prevent wrapping */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Add ellipsis if text overflows */
-  }
+  float: left;
+  font-size: 1.2rem;
 }
