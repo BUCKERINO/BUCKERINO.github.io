@@ -2,7 +2,7 @@ const portfolioContainer = document.querySelector('.portfolio-items');
 
 portfolioContainer.addEventListener("click", e => {
     e.preventDefault();
-
+    console.log(e);
     const modalToggle = e.target.closest(".portfolio-link");
 
     if (!modalToggle) return;

@@ -16,9 +16,15 @@
   bottom: 2em;
   left: 2em;
   right: 2em;
-  background: rgb(3, 0, 26);
+  background: rgb(25, 26, 68);
   box-shadow: 0 0 0 3em rgba(black, 0.75);
   overflow-y: scroll;
+
+  display: none;
+
+  &.is-open{
+    display: block;
+  }
 }
 
 .modal-close{
@@ -71,7 +77,7 @@
 
 .portfolio-subtitle{
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-style:bold;
   width: 50%;
   margin-left: 25%;
@@ -139,10 +145,13 @@
 }
 
 .square-image {
-    width: 300px; /* Adjust size as needed */
-    height: 300px; /* Ensure square size */
-    object-fit: cover; /* Maintain aspect ratio */
-    margin-right: 20px; /* Adjust margin as needed */
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  margin-right: 0px;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 .item-title{
@@ -151,7 +160,23 @@
 }
 
 .item-description{
-  text-align: center;
+  text-align: left;
   float: left;
   font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.item-description-left{
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+@keyframes modalFadeIn{
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes modalFadeOut{
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }

@@ -149,35 +149,49 @@
 					$link = $link.add($x);
 
 					$link.on('click', function(event) {
-
 						var href = $link.attr('href');
+						//console.log(event);
 
 						// Prevent default.
 							event.stopPropagation();
 							event.preventDefault();
+						// Open modal
+							const modalToggle = event.target.closest('.link')
+							//console.log(modalToggle);
 
-						// Target blank?
-							if ($link.attr('target') == '_blank') {
+							if(!modalToggle) return;
 
-								// Open in new tab.
-									window.open(href);
+							const modal = modalToggle.parentNode.nextElementSibling;
+							const closeButton = modal.querySelector('.modal-close');
+							//console.log(modal);
 
+							const OpenModal = _ =>{
+								modal.classList.add('is-open')
+								modal.style.animation = 'modalFadeIn 500ms forwards';
+								document.body.style.overflowY = 'hidden';
 							}
 
-						// Otherwise ...
-							else {
-
-								// Start transitioning.
-									$this.addClass('is-transitioning');
-									$wrapper.addClass('is-transitioning');
-
-								// Redirect.
-									window.setTimeout(function() {
-										location.href = href;
-									}, 500);
-
+							const CloseModal = _ =>{
+								modal.classList.remove('is-open');
+								modal.removeEventListener('animationend', CloseModal);
 							}
 
+							closeButton.addEventListener('click', _ =>{
+								modal.style.animation = 'modalFadeOut 500ms forwards';
+								document.body.style.overflowY = 'scroll';
+								modal.addEventListener('animationend', CloseModal);
+							})
+
+							document.addEventListener('keydown', e => {
+								if (e.keyCode === 27) {
+									modal.style.animation = 'modalFadeOut 500ms forwards';
+									modal.addEventListener('animationend', CloseModal);
+									document.body.style.overflowY = 'scroll';
+
+								}
+							});
+
+							OpenModal();
 					});
 
 				}

@@ -2880,11 +2880,11 @@ input, select, textarea {
 			}
 
 			.tiles article:nth-child(6n - 1):before {
-				background-color: #8ea9e8;
+				background-color: #28233d;
 			}
 
 			.tiles article:nth-child(6n):before {
-				background-color: #87c5a4;
+				background-color: #28233d;
 			}
 
 		@media screen and (max-width: 1280px) {
@@ -2972,6 +2972,8 @@ input, select, textarea {
 			-ms-flex-direction: row;
 			flex-direction: row;
 			background-color: #2e3450;
+			justify-content: center;
+			align-items: center;
 		}
 
 			.spotlights > section > .image {
@@ -2981,6 +2983,7 @@ input, select, textarea {
 				display: block;
 				position: relative;
 				width: 30%;
+				max-width: 100%;
 			}
 
 				.spotlights > section > .image img {
