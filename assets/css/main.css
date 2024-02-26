@@ -4001,6 +4001,17 @@ input, select, textarea {
 			padding:5px;
 			background-color: rgb(0, 0, 0);
 			border-radius: 5px;
+			max-width: 400px;
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		@media screen and (max-width: 768px) {
+			.project-box {
+				padding: 10px;
+				font-size: 90%; /* Adjust as needed */
+				max-width: 25%;
+			}
 		}
 
 		.trailer-player {
