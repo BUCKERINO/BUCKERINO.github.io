@@ -154,13 +154,15 @@
 								<article>
 									<figure class="portfolio-items">
 										<span class="image">
-											<img src="images/PlaceHolders/OopsiDoopsy.png" alt="" />
+											<img src="images/NekoLow/NekoLowBanner.png" alt="" />
 										</span>
 										<figcaption>
 											<header class="major">
 												<h3><a href="" class="link">NekoLow</a></h3>
 												<span class="project-subtitle">Unity3D · C# · Mobile · Alpha</span>
-												<p class="project-box"> explain nekolow here
+												<p class="project-box"> NekoLow is a game for android devices. Jump down the sewer to
+													get your delicious fish but be careful, there are monsters down there who have an 
+													apetite for cat.
 												</p>
 											</header>
 										</figcaption>
@@ -171,35 +173,42 @@
 									<a class="modal-close">&times;</a>
 									<div class="portfolio-header">
 										<div class="portfolio-title-box">
-											<h1 class="portfolio-title">NekoLow</h1>
+											<div class="portfolio-img-container">
+												<img clas="portfolio-img" src="images/NekoLow/NekoLowLogo.png" alt="" />
+											</div>
 												<div class="portfolio-video-container">
 													<iframe width="1000" height="600" src="https://www.youtube.com/embed/Sk_1crBV_P0?autoplay=1&mute=1&loop=1" frameborder="0" allowfullscreen></iframe>
 												</div>
-											<p class="portfolio-subtitle">Doodle dream School invasion is a topdown shooter where you have to kill monsters in order to escape the school.
-												At the beginning of the game you get to choose which weapon you want to use to kill the monsters. In order to
-												progress you have to kill all the monsters in the room and shoot down the door to go to the next room. Once you've
-												found the room with the stairs you'll be able to go down a floor. You can find the exit of the school on the main floor
-												but be careful because there is terible monster gaurding it.</p>
+											<p class="portfolio-subtitle">
+												For this project me and my brother worked together to make Nekolow. This was interesting because he had no
+												experience in game development whatsoever. But that didn't stop us. The game is inspired by a game called
+												downwell. You play as a cat that wants to get to the bottom of the well where a delicious snack is waiting
+												for it. During your fall you encounter monsters that dont want you there and try to attack you. You kill
+												them by shooting them or jumping on them.
+											</p>
 										</div>
 									</div> <!-- Close header-->
 									<!-- Modal content-->
 									<div class="portfolio-content">
 										<section id="two" class="spotlights">
 											<section>
-												<a href="https://gist.github.com/BUCKERINO/3d90f5686f9bf7b5917581752642c347" target="_blank">
-													<img class="square-image" src="gifs/DoodleDream/BreakableDoor.gif" alt="" data-position="center center" />
+												<a href="https://gist.github.com/BUCKERINO/7b3e4dac7cd3cfe9834e5962a15ce53f" target="_blank">
+													<img class="square-image" src="gifs/NekoLow/UIController.gif" alt="" data-position="center center" />
 												</a>
 												<div class="content">
 													<div class="inner">
 														<header class="major">
-															<h3 class="item-title">Breakable door</h3>
+															<h3 class="item-title">UIController</h3>
 														</header>
-														<p>We wanted more action in our game. So we thought it was a fun idea to shoot down the doors instead of opening a door.
-															For this to I made an array with all the rigidbody's of the door pieces and the gave the door some health. When a
-															bullet collides with the door the hp of the door goes down. When the hp is down to zero, a foreach loop will add a force, a direction
-															and a random torque to all the rigidbody's of the door pieces.</p>
+														<p class="item-description">
+															For the control of the UI we wanted to use buttons on the screen to select your options.
+															This came with a complication because you cant select a button with another button.
+															To solve this issue I put the menu buttons in an array. When left or right is pressed.
+															an interterger would increase and the color of the button would change based what number
+															the interger is. When you press the jump button the invoke of the selected button gets called.
+														</p>
 														<ul class="actions">
-															<li><a href="https://gist.github.com/BUCKERINO/3d90f5686f9bf7b5917581752642c347" class="button" target="_blank">Review code</a></li>
+															<li><a href="https://gist.github.com/BUCKERINO/7b3e4dac7cd3cfe9834e5962a15ce53f" class="button" target="_blank">Review code</a></li>
 														</ul>
 													</div>
 												</div>
@@ -211,9 +220,14 @@
 												<div class="content">
 													<div class="inner">
 														<header class="major">
-															<h3>Rhoncus magna</h3>
+															<h3 class="item-title">Weapon Manager</h3>
 														</header>
-														<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
+														<p class="item-description-left">
+															We wanted to make different weapons that you are able to pick up. To make this happen I made a weapon manager
+															script that manages what weapon is currently used and the what that shoot property should be. If the player
+															would shoot the shoot method from the weapon script would be called. This script uses an interface called
+															IProjectile so that it would be easier to make more weapons if wanted more.
+														</p>
 														<ul class="actions">
 															<li><a href="generic.html" class="button">Review code</a></li>
 														</ul>

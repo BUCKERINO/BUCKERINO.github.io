@@ -2181,7 +2181,7 @@ input, select, textarea {
 /* Image */
 
 	.image {
-		border: 0;
+		/*border: 0;*/
 		display: inline-block;
 		position: relative;
 	}

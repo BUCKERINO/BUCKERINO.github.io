@@ -64,6 +64,16 @@
   }
 }
 
+.portfolio-img-container{
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-img{
+  max-width: 10%;
+  height: auto;
+}
+
 .portfolio-video-container {
   position: relative;
   width: 100%;
