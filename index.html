@@ -262,7 +262,9 @@
 									</span>
 									<figcaption>
 										<header class="major">
-											<h3><a href="" class="link">Game Jam game</a></h3>
+											<h3>
+												<a href="" class="link">Make me laugh</a>
+											</h3>
 											<span class="project-subtitle">Unity3D · C# · PC · Alpha</span>
 											<p class="project-box"> 
 												The game jam game is a card game. Be the funny man you always wanted
@@ -278,16 +280,20 @@
 								<a class="modal-close">&times;</a>
 								<div class="portfolio-header">
 									<div class="portfolio-title-box">
-										<h1 class="portfolio-title">Game jam game</h1>
+										<h1 class="portfolio-title">Make me laugh</h1>
 											<div class="portfolio-video-container">
 												<iframe width="1000" height="600" src="https://www.youtube.com/embed/Sk_1crBV_P0?autoplay=1&mute=1&loop=1" frameborder="0" allowfullscreen></iframe>
 											</div>
 										<p class="portfolio-subtitle">
-											Doodle dream School invasion is a topdown shooter where you have to kill monsters in order to escape the school.
-											At the beginning of the game you get to choose which weapon you want to use to kill the monsters. In order to
-											progress you have to kill all the monsters in the room and shoot down the door to go to the next room. Once you've
-											found the room with the stairs you'll be able to go down a floor. You can find the exit of the school on the main floor
-											but be careful because there is terible monster gaurding it.
+											Make me laugh is the first game jam I participated in.
+											The theme was make me laugh. We were in a group of 8 
+											people and we had two days to make a game. The game
+											is inspired by a game by the name of shotgun roulette 
+											where you play roulette roullete with an eldrich monster.
+											Your objective is to use various items to make sure the
+											eldrich monster shoots himself. We wanted to make something
+											similar where you had cards with jokes on them to make
+											a funny joke.
 										</p>
 									</div>
 								</div> <!-- Close header-->
@@ -301,10 +307,15 @@
 											<div class="content">
 												<div class="inner">
 													<header class="major">
-														<h3 class="item-title">Making the cards</h3>
+														<h3 class="item-title">Generating the cards</h3>
 													</header>
 													<p class="item-description">
-														
+														We wanted the cards to be 3D objects and to make sure that is was
+														easy to change around its values. To make this happen I made
+														scriptable objects of the cards that can hold the information
+														of the card. These cards are put into a list and card objects
+														get made for every scriptable object in the list. Once they were
+														created they were removed from the list.
 													</p>
 													<ul class="actions">
 														<li><a href="https://gist.github.com/BUCKERINO/3d90f5686f9bf7b5917581752642c347" class="button" target="_blank">Review code</a></li>
@@ -321,8 +332,11 @@
 													<header class="major">
 														<h3 class="item-title">Cards moving to your hand</h3>
 													</header>
-													<p class="item-description-left">N
-														ullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.
+													<p class="item-description-left">
+														We thought it be cool to make the cards move from a deck to
+														the players hand. I accomplished this by having three empty
+														objects in an array and then move the cards to their position
+														with a for loop.
 													</p>
 													<ul class="actions">
 														<li><a href="https://gist.github.com/BUCKERINO/af8f707c886cbf88187a5a0c175607ab" target="_blank" class="button">Review code</a></li>
@@ -340,7 +354,15 @@
 														<h3 class="item-title">Selecting the cards</h3>
 													</header>
 													<p class="item-description">
-														Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.
+														We also needed to have a way to select the card to make
+														the joke. I accomplished this by having them move up when
+														the mouse hovererd over a card. This makes it easier to
+														see which card your gonna select and what the card says.
+														If you then select the card that you want to use a value
+														would be checked called funnyModifier to see if the card
+														if the joke is funny or not. If the value is +1, the joke
+														is considered funny, 0 if the joke was not that funny but
+														not that bad either and -1 if the joke was bad.
 													</p>
 													<ul class="actions">
 														<li><a href="https://gist.github.com/BUCKERINO/7dd5bb7f4cf5c87e4b2b9decfb72cd55" target="_blank" class="button">Review code</a></li>
@@ -349,8 +371,8 @@
 											</div>
 										</section>
 										<section>
-											<a href="generic.html" class="image">
-												<img class="square-image" src="images/pic10.jpg" alt="" data-position="25% 25%" />
+											<a href="https://gist.github.com/BUCKERINO/66382e934afa5d1b22511849d0b63f90" target="_blank" class="image">
+												<img class="square-image" src="images/GameJamGame/AudioManager.png" alt="" data-position="25% 25%" />
 											</a>
 											<div class="content">
 												<div class="inner">
@@ -358,10 +380,17 @@
 														<h3 class="item-title">AudioManager</h3>
 													</header>
 													<p class="item-description-left">
-														Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.
+														We also needed some audio to set the mood. For this I made 
+														an array of Sounds. These sounds had some values you could
+														change change. Then in the audio manager script new audio
+														source components are made from those values. Lastly the
+														audio manager had a public funtion called play which took in
+														a string. If wanted to play a certain sound at some point
+														I can call up the instance of the audio manager and say
+														which sound needs to be played by typing the name of the sound.
 													</p>
 													<ul class="actions">
-														<li><a href="generic.html" class="button">Review code</a></li>
+														<li><a href="https://gist.github.com/BUCKERINO/66382e934afa5d1b22511849d0b63f90" target="_blank" class="button">Review code</a></li>
 													</ul>
 												</div>
 											</div>
