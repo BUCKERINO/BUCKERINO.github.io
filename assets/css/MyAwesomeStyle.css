@@ -9,6 +9,29 @@
     
 }
 
+.image-right {
+  position: relative;
+  float: right;
+  margin: 0 0 1.25em 1.5em; /* Adjust this margin for space between the image and text */
+  top: 0.25em;
+  max-width: 100%; /* Set maximum width */
+  width: 20%; /* Set initial width */
+}
+
+@media screen and (max-width: 768px) {
+  /* Adjust image size for smaller screens */
+  .image-right {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Further adjust image size for even smaller screens */
+  .image-right {
+    width: 30%;
+  }
+}
+
 .portfolio-modal{
   position: fixed;
   z-index: 10;
