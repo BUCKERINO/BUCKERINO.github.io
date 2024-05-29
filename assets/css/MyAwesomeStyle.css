@@ -1,0 +1,234 @@
+
+.h2-title{
+    color: #ffffff;
+		font-weight: 600;
+		line-height: 1.65;
+}
+
+.p-text{
+    
+}
+
+.image-right {
+  position: relative;
+  float: right;
+  margin: 0 0 1.25em 1.5em; /* Adjust this margin for space between the image and text */
+  top: 0.25em;
+  max-width: 100%; /* Set maximum width */
+  width: 20%; /* Set initial width */
+}
+
+@media screen and (max-width: 768px) {
+  /* Adjust image size for smaller screens */
+  .image-right {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Further adjust image size for even smaller screens */
+  .image-right {
+    width: 30%;
+  }
+}
+
+.portfolio-modal{
+  position: fixed;
+  z-index: 10;
+  top: 2em;
+  bottom: 2em;
+  left: 2em;
+  right: 2em;
+  background: rgb(25, 26, 68);
+  box-shadow: 0 0 0 3em rgba(black, 0.75);
+  overflow-y: scroll;
+
+  display: none;
+
+  &.is-open{
+    display: block;
+  }
+}
+
+.modal-close{
+  position: absolute;
+  font-size: 60px;
+  top:-0.2em;
+  right: 0.5em;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+}
+
+.portfolio-header{
+  text-align: center;
+  padding: 2em 0;
+}
+
+.portfolio-title-box{
+  color: white;
+
+  .portfolio-title{
+    font-size: 3rem;
+    display: inline-block;
+    position: relative;;
+
+    &::after{
+      content:'';
+      display: block;
+      height: 2px;
+      background: white;
+      width: calc(100% + 1em);
+      position: absolute;
+      bottom: -0.5em;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.portfolio-img-container{
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-img{
+  max-width: 10%;
+  height: auto;
+}
+
+.portfolio-video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.portfolio-video-container iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 80%;
+}
+
+.portfolio-subtitle{
+  text-align: center;
+  font-size: 1.5rem;
+  font-style:bold;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.portfolio-content{
+  text-align: center;
+  width: 85%;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+@media (min-width: 40em) {
+  .content-item {
+      display: flex;
+      align-items: center;
+  }
+
+  .img-pull-left {
+      width: 60%;
+      margin-right: 2em;
+      float: left;
+  }
+
+  .img-pull-right {
+      width: 60%;
+      margin-left: 2em;
+      float: right;
+  }
+
+  .img-pull-left img,
+  .img-pull-right img {
+      width: 100%; /* Ensure images take full width of their container */
+      height: auto; /* Maintain aspect ratio */
+      max-width: 100%; /* Ensure images don't exceed their container's width */
+      max-height: 100%; /* Ensure images don't exceed their container's height */
+      object-fit: cover; /* Ensure the entire image is visible */
+  }
+}
+
+@media (max-width :40em){
+  .img-pull-left img,
+    .img-pull-right img {
+        width: 80vw; /* 80% of viewport width */
+        max-width: 100%; /* Ensure images don't exceed their container's width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+.content-title{
+  font-size: 30px;
+  
+  &::after{
+    content:'';
+    display: block;
+    height: 2px;
+    background: white;
+    width: calc(100% + 1em);
+    position: absolute;
+    bottom: -0.5em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.content-item{
+  padding: 8em 0;
+}
+
+.square-image {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  margin-right: 0px;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.item-title{
+  font-size: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 798px){
+  .item-title{
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 480px){
+  .item-title{
+    font-size: 6vw;
+  }
+}
+
+.item-description{
+  text-align: left;
+  float: left;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.item-description-left{
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+@keyframes modalFadeIn{
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes modalFadeOut{
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}

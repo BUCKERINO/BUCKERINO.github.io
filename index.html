@@ -1,0 +1,674 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Tycho van de Wetering</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/MyAwesomeStyle.css">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<a href="index.html" class="logo"><strong>Tycho van de Wetering</strong></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html" class="button next scrolly">Home</a></li>
+							<li><a href="#one" class="button next scrolly">Projects</a></li>
+							<li><a href="#footer" class="button next scrolly">About me</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner" class="major" style="background-image: url(&quot;images/LogoPlaceholder.jpg)">
+						<div class="inner">
+							<header class="major">
+								<h1>Tycho van de Wetering</h1>
+							</header>
+							<div class="content">
+								<p>
+									Hi there, Welcome to my portfolio. In here you can find my projects 
+                                    that I have worked on over time as a Game developer.
+								</p>
+								<ul class="actions">
+									<li><a href="#one" class="button next scrolly">See projects</a></li>
+								</ul>
+							</div>
+							<span class="image" style="display: none;"> <img src="images/MeCanvas.png" alt> </span>
+						</div>
+					</section>
+				<!-- Main -->
+					<div id="main">
+						<!-- Section One -->
+						<section id="one" class="tiles">
+							<!-- Portfolio Item 1 -->
+							<article>
+								<figure class="portfolio-items">
+									<span class="image">
+										<img src="images/DoodleDream/doodle_dream_poster.png" alt="" />
+									</span>
+									<figcaption>
+										<header class="major">
+											<h3><a href="" class="link">Doodle Dream <br>
+																			School Invasion</a></h3>
+											<span class="project-subtitle">Unity3D · C# · PC · Alpha</span>
+											<p class="project-box">
+												Doodle dream school invasion is a
+												Third person top down shooter.
+												Kill the monsters in order to escape 
+												the school and save the day of the
+												monster invasion.
+											</p>
+										</header>
+									</figcaption>
+								</figure>
+							</article>
+								<!-- Portfolio Modal 1 -->
+									<div class="portfolio-modal">
+										<a class="modal-close">&times;</a>
+										<div class="portfolio-header">
+											<div class="portfolio-title-box">
+												<h1 class="portfolio-title">Doodle dream School invasion</h1>
+													<div class="portfolio-video-container">
+														<iframe width="1000" height="600" src="https://www.youtube.com/embed/Sk_1crBV_P0?autoplay=1&mute=1&loop=1" frameborder="0" allowfullscreen></iframe>
+													</div>
+												<p class="portfolio-subtitle">
+													Doodle dream school invasion is a top-down shooter where you have to kill monsters in order to escape the school.
+                                                    At the beginning of the game, you get to choose which weapon you want to use to kill the monsters. In order to
+                                                    progress, you have to kill all the monsters in the room and shoot down the door to go to the next room. Once you've
+                                                    found the room with the stairs, you'll be able to go down a floor. You can find the exit of the school on the main floor
+                                                    but be careful because there is a terrible monster guarding it.
+												</p>
+											</div>
+										</div> <!-- Close header-->
+										<!-- Modal content-->
+										<div class="portfolio-content">
+											<section id="two" class="spotlights">
+												<section>
+													<a href="https://gist.github.com/BUCKERINO/3d90f5686f9bf7b5917581752642c347" target="_blank">
+														<img class="square-image" src="gifs/DoodleDream/BreakableDoor.gif" alt="" data-position="center center" />
+													</a>
+													<div class="content">
+														<div class="inner">
+															<header class="major">
+																<h3 class="item-title">Breakable door</h3>
+															</header>
+															<p class="item-description">
+																We wanted more action in our game. So we thought it was a fun idea to shoot down the doors instead of opening a door.
+                                                                For this to work, I made an array with all the rigid body's of the door pieces and then gave the door some health. When a
+                                                                bullet collides with the door, the hp of the door goes down. When the hp is down to zero, a foreach loop will add a force, a direction
+                                                                and a random torque to all the rigidbody's of the door pieces.
+															</p>
+															<ul class="actions">
+																<li><a href="https://gist.github.com/BUCKERINO/3d90f5686f9bf7b5917581752642c347" class="button" target="_blank">Review code</a></li>
+															</ul>
+														</div>
+													</div>
+												</section>
+												<section>
+													<a href="https://gist.github.com/BUCKERINO/a2cdf242f7199e51a3d84c8a76bcbd0d" target="_blank">
+														<img class="square-image" src="gifs/DoodleDream/RoomDetection.gif" alt="" data-position="center center" />
+													</a>
+													<div class="content">
+														<div class="inner">
+															<header class="major">
+																<h3 class="item-title">Room detection</h3>
+															</header>
+															<p class="item-description-left">
+																We had a problem where the enemies were able to immediately go towards the player when the game began. This was an issue because we don't want
+                                                                enemy's to attack the player when the player is not in the same room as the enemy's. To fix this, I made a room detection. This made sure that
+                                                                the enemy's only started moving when the player was in the same room as the enemy's and it also turned on the lights to show that the room
+                                                                got activated.
+															</p>
+															<ul class="actions">
+																<li><a class="button" href="https://gist.github.com/BUCKERINO/a2cdf242f7199e51a3d84c8a76bcbd0d" target="_blank">Review code</a></li>
+															</ul>
+														</div>
+													</div>
+												</section>
+												<section>
+													<a href="https://gist.github.com/BUCKERINO/e2ca7c46bf6d7399443d04c8ec7c4578" target="_blank">
+														<img class="square-image" src="gifs/DoodleDream/GunUIAndSO's.gif" alt="" data-position="25% 25%" />
+													</a>
+													<div class="content">
+														<div class="inner">
+															<header class="major">
+																<h3 class="item-title">The gun</h3>
+															</header>
+															<p class="item-description">
+																For the gun, we wanted to be able to switch between multiple guns to add a bit of variety when killing the monsters. 
+                                                                In order to get this working, I made sure the guns were scriptable objects with a fire and reload function. This gave
+                                                                me the ability to make a script where I could load in the gun and have easy access to its functions.
+															</p>
+															<ul class="actions">
+																<li><a href="https://gist.github.com/BUCKERINO/e2ca7c46bf6d7399443d04c8ec7c4578" target="_blank"class="button">Review code</a></li>
+															</ul>
+														</div>
+													</div>
+												</section>
+											</section>
+										</div>
+									</div>
+								<!-- Close modal-->
+								<!-- Portfolio Item 2 -->
+								<article>
+									<figure class="portfolio-items">
+										<span class="image">
+											<img src="images/NekoLow/NekoLowBanner.png" alt="" />
+										</span>
+										<figcaption>
+											<header class="major">
+												<h3><a href="" class="link">NekoLow</a></h3>
+												<span class="project-subtitle">Unity3D · C# · Mobile · Alpha</span>
+												<p class="project-box"> 
+													NekoLow is a game for android devices. Jump down the sewer to
+                                                    get your delicious fish but be careful, there are monsters down there who have an 
+                                                    Appetite for cat.
+												</p>
+											</header>
+										</figcaption>
+									</figure>
+								</article>
+								<!-- Portfolio modal 2-->
+								<div class="portfolio-modal">
+									<a class="modal-close">&times;</a>
+									<div class="portfolio-header">
+										<div class="portfolio-title-box">
+											<div class="portfolio-img-container">
+												<img clas="portfolio-img" src="images/NekoLow/NekoLowLogo.png" alt="" />
+											</div>
+												<div class="portfolio-video-container">
+													<iframe width="1000" height="600" src="https://www.youtube.com/embed/sobSUbiOkZM?autoplay=1&mute=1&loop=1" frameborder="0" allowfullscreen></iframe>
+												</div>
+											<p class="portfolio-subtitle">
+												For this project, my brother and I worked together to make Nekolow. This was interesting because he had no
+                                                experience in game development whatsoever. But that didn't stop us. The game is inspired by a game called
+                                                downwell. You play as a cat that wants to get to the bottom of the well where a delicious snack is waiting
+                                                for it. During your fall, you encounter monsters that don't want you there and try to attack you. You kill
+                                                them by shooting them or jumping on them.
+											</p>
+										</div>
+									</div> <!-- Close header-->
+									<!-- Modal content-->
+									<div class="portfolio-content">
+										<section id="two" class="spotlights">
+											<section>
+												<a href="https://gist.github.com/BUCKERINO/7b3e4dac7cd3cfe9834e5962a15ce53f" target="_blank">
+													<img class="square-image" src="gifs/NekoLow/UIController.gif" alt="" data-position="center center" />
+												</a>
+												<div class="content">
+													<div class="inner">
+														<header class="major">
+															<h3 class="item-title">UIController</h3>
+														</header>
+														<p class="item-description">
+															For the controls of the UI, we wanted to use buttons on the screen to select your options.
+                                                            This came with a complication because you can't select a button with another button.
+                                                            To solve this issue, I put the menu buttons in an array. When left or right is pressed.
+                                                            An integer would increase and the color of the button would change based on what number
+                                                            the integer is. When you press the jump button, the invoke of the selected button gets called.
+														</p>
+														<ul class="actions">
+															<li><a href="https://gist.github.com/BUCKERINO/7b3e4dac7cd3cfe9834e5962a15ce53f" class="button" target="_blank">Review code</a></li>
+														</ul>
+													</div>
+												</div>
+											</section>
+											<section>
+												<a href="https://gist.github.com/BUCKERINO/c8297f7b4dea58cdcf59298c97279bf6" target="_blank"class="image">
+													<img class="square-image" src="gifs/NekoLow/gun.gif" alt="" data-position="top center" />
+												</a>
+												<div class="content">
+													<div class="inner">
+														<header class="major">
+															<h3 class="item-title">Weapon Manager</h3>
+														</header>
+														<p class="item-description-left">
+															We wanted to make different weapons that you are able to pick up. To make this happen, I made a weapon manager
+                                                            script that manages what weapon is currently used and what its shoot behavior should be. If the player
+                                                            would shoot, the shoot method from the weapon script would be called. This script uses an interface called
+                                                            IProjectile so that it would be easier to make more weapons if wanted more.
+														</p>
+														<ul class="actions">
+															<li><a href="https://gist.github.com/BUCKERINO/c8297f7b4dea58cdcf59298c97279bf6" target="_blank" class="button">Review code</a></li>
+														</ul>
+													</div>
+												</div>
+											</section>
+											<section>
+												<a href="https://gist.github.com/BUCKERINO/b57f735c7ba0906b1cd410fedeb6c64f" target="_blank"class="image">
+													<img class="square-image" src="gifs/NekoLow/JumpOnEnemy.gif" alt="" data-position="center center" />
+												</a>
+												<div class="content">
+													<div class="inner">
+														<header class="major">
+															<h3 class="item-title">Jump on enemies</h3>
+														</header>
+														<p class="item-description">
+															Just like a lot of other platform games, we wanted to let the player jump on
+                                                            enemies to kill them. When landed on the enemy they get destroyed and the player
+                                                            gets launched upwards a little to show that the player bounced on the enemy.
+                                                            A little particle effect is added to make it look a little bit nicer.
+														</p>
+														<ul class="actions">
+															<li><a  a href="https://gist.github.com/BUCKERINO/b57f735c7ba0906b1cd410fedeb6c64f" target="_blank" class="button">Review code</a></li>
+														</ul>
+													</div>
+												</div>
+											</section>
+										</section>
+									</div>
+								</div>
+							<!-- Close modal-->
+							<!-- Third Portfolio item-->
+							<article>
+								<figure class="portfolio-items">
+									<span class="image">
+										<img src="images/MakeMeLaugh/Banner.png" alt="" />
+									</span>
+									<figcaption>
+										<header class="major">
+											<h3>
+												<a href="" class="link">Make me laugh</a>
+											</h3>
+											<span class="project-subtitle">Unity3D · C# · PC · Alpha</span>
+											<p class="project-box"> 
+												Make me laugh game is a card game. Be the funny man you always wanted
+                                                to be by making the demon laugh, but be careful not to make the wrong
+                                                jokes though.
+											</p>
+										</header>
+									</figcaption>
+								</figure>
+							</article>
+							<!-- Portfolio Modal 3-->
+							<div class="portfolio-modal">
+								<a class="modal-close">&times;</a>
+								<div class="portfolio-header">
+									<div class="portfolio-title-box">
+										<h1 class="portfolio-title">Make me laugh</h1>
+										<p class="portfolio-subtitle">
+											Make me laugh is the first game jam I participated in.
+                                            The theme was make me laugh. We were in a group of 8 
+                                            people and we had two days to make a game. The game
+                                            is inspired by a game by the name of shotgun roulette 
+                                            where you play shotgun roulette with an eldritch monster.
+                                            Your objective is to use various items to make sure the
+                                            Eldritch monster shoots himself. We wanted to make something
+                                            similar, where you had cards with jokes on them to make
+                                            a funny joke.
+										</p>
+									</div>
+								</div> <!-- Close header-->
+								<!-- Modal content-->
+								<div class="portfolio-content">
+									<section id="two" class="spotlights">
+										<section>
+											<a href="https://gist.github.com/BUCKERINO/3d90f5686f9bf7b5917581752642c347" target="_blank">
+												<img class="square-image" src="images/MakeMeLaugh/Cards.png" alt="" data-position="center center" />
+											</a>
+											<div class="content">
+												<div class="inner">
+													<header class="major">
+														<h3 class="item-title">Generating the cards</h3>
+													</header>
+													<p class="item-description">
+														We wanted the cards to be 3D objects and to make sure that it was
+                                                        easy to change around its values. To make this happen, I made
+                                                        scriptable objects of the cards that can hold the information
+                                                        of the card. These cards are put into a list and card objects
+                                                        get made for every scriptable object in the list. Once they were
+                                                        created they were removed from the list.
+													</p>
+													<ul class="actions">
+														<li><a href="https://gist.github.com/BUCKERINO/3d90f5686f9bf7b5917581752642c347" class="button" target="_blank">Review code</a></li>
+													</ul>
+												</div>
+											</div>
+										</section>
+										<section>
+											<a href="https://gist.github.com/BUCKERINO/af8f707c886cbf88187a5a0c175607ab" target="_blank">
+												<img class="square-image" src="gifs/MakeMeLaugh/CreateCardAndMoveCardToHand.gif" alt="" data-position="top center" />
+											</a>
+											<div class="content">
+												<div class="inner">
+													<header class="major">
+														<h3 class="item-title">Cards moving to your hand</h3>
+													</header>
+													<p class="item-description-left">
+														We thought it would be cool to make the cards move from a deck to
+                                                        the players hand. I accomplished this by having three empty
+                                                        objects in an array and then move the cards to their position
+                                                        with a for loop.
+													</p>
+													<ul class="actions">
+														<li><a href="https://gist.github.com/BUCKERINO/af8f707c886cbf88187a5a0c175607ab" target="_blank" class="button">Review code</a></li>
+													</ul>
+												</div>
+											</div>
+										</section>
+										<section>
+											<a href="https://gist.github.com/BUCKERINO/7dd5bb7f4cf5c87e4b2b9decfb72cd55" target="_blank">
+												<img class="square-image" src="gifs/MakeMeLaugh/CardHover.gif" alt="" data-position="top center" />
+											</a>
+											<div class="content">
+												<div class="inner">
+													<header class="major">
+														<h3 class="item-title">Selecting the cards</h3>
+													</header>
+													<p class="item-description">
+														We also needed to have a way to select the card to make
+                                                        the joke. I accomplished this by having them move up when
+                                                        the mouse hovered over a card. This makes it easier to
+                                                        see which card you're going to select and what the card says.
+                                                        If you then select the card that you want to use, a value
+                                                        would be checked called funnyModifier to see if the card
+                                                        if the joke is funny or not. If the value is +1, the joke
+                                                        is considered funny, 0 if the joke was not that funny but
+                                                        not that bad either, and -1 if the joke was bad.
+													</p>
+													<ul class="actions">
+														<li><a href="https://gist.github.com/BUCKERINO/7dd5bb7f4cf5c87e4b2b9decfb72cd55" target="_blank" class="button">Review code</a></li>
+													</ul>
+												</div>
+											</div>
+										</section>
+										<section>
+											<a href="https://gist.github.com/BUCKERINO/66382e934afa5d1b22511849d0b63f90" target="_blank" class="image">
+												<img class="square-image" src="images/MakeMeLaugh/AudioManager.png" alt="" data-position="25% 25%" />
+											</a>
+											<div class="content">
+												<div class="inner">
+													<header class="major">
+														<h3 class="item-title">AudioManager</h3>
+													</header>
+													<p class="item-description-left">
+														We also needed some audio to set the mood. For this, I made 
+                                                        an array of Sounds. These sounds had some values, you could
+                                                        change. Then in the audio manager script new audio
+                                                        source components are made from those values. Lastly the
+                                                        audio manager had a public function called play, which took in
+                                                        a string. If wanted to play a certain sound at some point
+                                                        I can call up the instance of the audio manager and say
+                                                        which sound needs to be played by typing the name of the sound.
+													</p>
+													<ul class="actions">
+														<li><a href="https://gist.github.com/BUCKERINO/66382e934afa5d1b22511849d0b63f90" target="_blank" class="button">Review code</a></li>
+													</ul>
+												</div>
+											</div>
+										</section>
+									</section>
+								</div>
+							</div>
+						<!-- Close modal-->
+							<!-- Fourth item -->
+							<article>
+								<figure class="portfolio-items">
+									<span class="image">
+										<img src="images/SteamSky/SteamSkyBanner.png" alt="" />
+									</span>
+									<figcaption>
+										<header class="major">
+											<h3><a href="landing.html" class="link">Steam Sky</a></h3>
+											<span class="project-subtitle">Unity3D · C# · PC · Alpha</span>
+											<p class="project-box">
+												Steam sky is a bullet hell.
+												Soar across the sky while dodging
+												bullets and enemy ships
+											</p>
+										</header>
+									</figcaption>
+								</figure>
+							</article>
+							<!-- Portfolio Modal 2 -->
+							<div class="portfolio-modal">
+								<a class="modal-close">&times;</a>
+								<div class="portfolio-header">
+									<div class="portfolio-title-box">
+										<h1 class="portfolio-title">SteamSky</h1>
+											<div class="portfolio-video-container">
+												<iframe width="1000" height="600" src="https://www.youtube.com/embed/oK3c0z7UFQU?autoplay=1&mute=1&loop=1" frameborder="0" allowfullscreen></iframe>
+											</div>
+										<p class="portfolio-subtitle">
+											SteamSky is my first project where I worked together
+                                            with another game developer and game artists. The game is a bullet hell side scroller game. 
+                                            In this game, you have to dodge bullets from enemies that move towards you in unique patterns.
+                                            Score as many points as possible and defeat the final boss at the end.
+										</p>
+									</div>
+								</div> <!-- Close header-->
+								<!-- Modal content-->
+								<div class="portfolio-content">
+									<section id="two" class="spotlights">
+										<section>
+											<a href="https://gist.github.com/BUCKERINO/a1f30f463277ac5b0da59588c7f011dd" target="_blank">
+												<img class="square-image" src="gifs/SteamSky/WaveSpawner.gif" alt="" data-position="center center" />
+											</a>
+											<div class="content">
+												<div class="inner">
+													<header class="major">
+														<h3 class="item-title">The wave spawner</h3>
+													</header>
+													<p class="item-description">
+														When we were discussing how we wanted to spawn enemies, we came to the conclusion that
+                                                        We wanted the waves of enemies to be fully customizable so that every wave looked unique.
+                                                        So for every wave you can give it a name, add enemies to a list and per enemy you can
+                                                        say what their movement is supposed to be. You can choose between move straight, move along
+                                                        a sin wave or a custom path.
+													</p>
+													<ul class="actions">
+														<li><a href="https://gist.github.com/BUCKERINO/a1f30f463277ac5b0da59588c7f011dd" class="button" target="_blank">Review code</a></li>
+													</ul>
+												</div>
+											</div>
+										</section>
+										<section>
+											<a href="https://gist.github.com/BUCKERINO/e90eab09546ed90632e162592950c8cf" target="_blank" class="image">
+												<img src="images/SteamSky/Highscore screen.png" alt="" data-position="top center" />
+												<img src="images/SteamSky/Winscreen.png" alt="" data-position="top center" />
+											</a>
+											<div class="content">
+												<div class="inner">
+													<header class="major">
+														<h3 class="item-title">Highscore</h3>
+													</header>
+													<p class="item-description-left">
+														We wanted to add high scores to encourage players to aim for the best scores
+                                                        and compete with their friends. It works by asking the player at the win
+                                                        screen to submit a name. This name and score saved in the playerprefs and
+                                                        converted to a JSON file. When the player goes to high score screen the
+                                                        high scores get loaded from the JSON file and are ordered based on highest
+                                                        score.
+													</p>
+													<ul class="actions">
+														<li><a href="https://gist.github.com/BUCKERINO/e90eab09546ed90632e162592950c8cf" target="_blank" class="button">Review code</a></li>
+													</ul>
+												</div>
+											</div>
+										</section>
+									</section>
+								</div>
+							</div>
+						<!-- Close modal-->
+							<!-- Third item -->
+							<article>
+								<figure class="portfolio-items">
+									<span class="image">
+										<img src="images/Platformer/FirstPlatformerIMG.png" alt="" />
+									</span>
+									<figcaption>
+										<header class="major">
+											<h3><a href="" class="link">The Platformer</a></h3>
+											<span class="project-subtitle">CanvasEngine · C# · PC · Alpha</span>
+											<p class="project-box">
+												In The Platformer you play 
+												as a small cube that jumps
+												from platform to platform
+												while dodging obstacles
+										</header>
+									</figcaption>
+								</figure>
+							</article>
+							<!-- Portfolio Modal 3 -->
+							<div class="portfolio-modal">
+								<a class="modal-close">&times;</a>
+								<div class="portfolio-header">
+									<div class="portfolio-title-box">
+										<h1 class="portfolio-title">The Platformer</h1>
+											<div class="portfolio-video-container">
+												<iframe width="1000" height="600" src="https://www.youtube.com/embed/elb4jLuFZP8?autoplay=1&mute=1&loop=1" frameborder="0" allowfullscreen></iframe>
+											</div>
+										<p class="portfolio-subtitle">
+											This is my first game that I have ever made. It was made in an engine called
+                                            Canvas Engine, which was an engine to help us learn to code before we started
+                                            on working in Unity. It was really challenging because I wanted to add a lot
+                                            of things that Unity has implemented that I needed to make myself.
+										</p>
+									</div>
+								</div> <!-- Close header-->
+								<!-- Modal content-->
+								<div class="portfolio-content">
+									<section id="two" class="spotlights">
+										<section>
+											<a href="https://gist.github.com/BUCKERINO/5ebc4f5b5ae9d1fe529cdd58db2ee0ab" target="_blank">
+												<img class="square-image" src="gifs/ThePlatformer/Velocity.gif" alt="" data-position="center center" />
+											</a>
+											<div class="content">
+												<div class="inner">
+													<header class="major">
+														<h3 class="item-title">Velocity</h3>
+													</header>
+													<p class="item-description">
+														The player needed some way of moment. That's why I sort of made velocity.
+                                                        For the left and right movement, I had a value that would increase when
+                                                        moving right and decrease when moving left. For the y movement, I had a
+                                                        constant value that would move the y of the character down. When the player
+                                                        jumps the y value gets increased over time and then decreases to simulate
+                                                        gravity.
+													</p>
+													<ul class="actions">
+														<li><a href="https://gist.github.com/BUCKERINO/5ebc4f5b5ae9d1fe529cdd58db2ee0ab" target="_blank" class="button">Review code</a></li>
+													</ul>
+												</div>
+											</div>
+										</section>
+										<section>
+											<a href="https://gist.github.com/BUCKERINO/edd6d38dd444eb83f7331494f3c6616f" target="_blank">
+												<img class="square-image" src="gifs/ThePlatformer/collision.gif" alt="" data-position="center center" />
+											</a>
+											<div class="content">
+												<div class="inner">
+													<header class="major">
+														<h3 class="item-title">Collision detection</h3>
+													</header>
+													<p class="item-description-left">
+														Without collision, you can't play a game. What I did to achieve this was check
+                                                        if the x position and y position of the player plus the player's width and
+                                                        height and check if they were inside the x and y plus width and height
+                                                        of the object that needed collision. If it was, then the gravity of the player
+                                                        would be set to zero.
+														</p>
+													<ul class="actions">
+														<li><a href="https://gist.github.com/BUCKERINO/edd6d38dd444eb83f7331494f3c6616f" class="button" target="_blank">Review code</a></li>
+													</ul>
+												</div>
+											</div>
+										</section>
+										<section>
+											<a href="https://gist.github.com/BUCKERINO/7685d0b3c60662611c5e751445d550c4" target="_blank">
+												<img class="square-image" src="gifs/ThePlatformer/Spikes.gif" alt="" data-position="center center" />
+												<img class="square-image" src="images/Platformer/Spikes.png" alt="" data-position="center center" />
+											</a>
+											<div class="content">
+												<div class="inner">
+													<header class="major">
+														<h3 class="item-title">Spikes</h3>
+													</header>
+													<p class="item-description">
+														I wanted to add some variety to make the game not boring. To make this happen
+                                                        I added moving and static spikes. If the player collided with one, the
+                                                        player would lose and had to restart the level.
+													</p>
+													<ul class="actions">
+														<li><a href="https://gist.github.com/BUCKERINO/7685d0b3c60662611c5e751445d550c4" target="_blank" class="button">Review code</a></li>
+													</ul>
+												</div>
+											</div>
+										</section>
+									</section>
+								</div>
+							</div>
+						<!-- Close modal-->
+						</section>
+					</div>
+					<!-- Section Two -->
+					<section id="two">
+						<div class="inner">
+							<header class="major">
+								<h2>About me</h2>
+							</header>
+							<p>
+								<span>
+									<img class="image-right" src="images/Me.png">
+								</span>
+								Hello, I am Tycho van de Wetering, a game developer specializing in gameplay
+                                programming for Unity C#. As a second-year game development student, I have
+                                been able to learn and explore various aspects of game development and I have
+                                gained a good understanding in not only programming but also: how to organize
+                                production and working with other game developers and game artists.
+							</p>
+
+							<p>
+								Even though gameplay programming is my primary focus, I also learned some other
+                                aspects of game development such as: scrum leader, level designer, UI maker and
+                                integrator, audio editor and integrator and FSM designer.
+							</p>
+
+							<p>
+								Please take a look around my portfolio, where you will be fascinated about my latest
+                                projects that are showcasing what my skills and specialties are. You can reach out to
+                                me by pressing the button below or clicking on one of the buttons at the bottom of
+                                this page.
+							</p>
+								<ul class="actions">
+									<li><a href="mailto:tycho.vandewetering@protonmail.com" class="button next">Send message</a></li>
+								</ul>
+						</div>
+					</section>
+
+					<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="https://github.com/BUCKERINO" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/tycho-van-de-wetering-5224942b8/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="mailto:tycho.vandewetering@protonmail.com" class="icon solid alt fa-envelope"><span class="label">E-mail</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+			</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
