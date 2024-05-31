@@ -85,9 +85,9 @@
 													</div>
 												<p class="portfolio-subtitle">
 													Doodle dream school invasion is a top-down shooter where you have to kill monsters in order to escape the school.
-                                                    At the beginning of the game, you get to choose which weapon you want to use to kill the monsters. In order to
-                                                    progress, you have to kill all the monsters in the room and shoot down the door to go to the next room. Once you've
-                                                    found the room with the stairs, you'll be able to go down a floor. You can find the exit of the school on the main floor
+                                                    At the beginning of the game, you get to choose which weapon you want to use to get out of the building. In order to
+                                                    progress, you have to defeat all the monsters in the room and shoot down the doors to enter the next room. Once you've
+                                                    the stairs, you'll be able to go down a floor. You can find the exit of the school on the main floor
                                                     but be careful because there is a terrible monster guarding it.
 												</p>
 											</div>
@@ -105,10 +105,11 @@
 																<h3 class="item-title">Breakable door</h3>
 															</header>
 															<p class="item-description">
-																We wanted more action in our game. So we thought it was a fun idea to shoot down the doors instead of opening a door.
-                                                                For this to work, I made an array with all the rigid body's of the door pieces and then gave the door some health. When a
-                                                                bullet collides with the door, the hp of the door goes down. When the hp is down to zero, a foreach loop will add a force, a direction
-                                                                and a random torque to all the rigidbody's of the door pieces.
+																We wanted more action in our game. So we thought it was a fun idea to shoot down the doors instead of opening them.
+                                                                The problem was that the door had multiple pieces that had to fly away in order to make it look like it was getting blown up.
+																To fix this problem, I made an array with all the rigid body's of the door pieces and then gave the door some health. When a
+                                                                bullet collides with the door, the hit points of the door goes down. When the health of the door is down to zero, a foreach loop adds force, direction
+                                                                and a random torque to all the rigidbody's of the door pieces to make it look like it is exploding.
 															</p>
 															<ul class="actions">
 																<li><a href="https://gist.github.com/BUCKERINO/3d90f5686f9bf7b5917581752642c347" class="button" target="_blank">Review code</a></li>
@@ -127,9 +128,9 @@
 															</header>
 															<p class="item-description-left">
 																We had a problem where the enemies were able to immediately go towards the player when the game began. This was an issue because we don't want
-                                                                enemy's to attack the player when the player is not in the same room as the enemy's. To fix this, I made a room detection. This made sure that
-                                                                the enemy's only started moving when the player was in the same room as the enemy's and it also turned on the lights to show that the room
-                                                                got activated.
+                                                                enemy's to walk towards the player and/or attack it when the player is not in the same room as the enemy's. In order to get rid of this problem, I made a room detection. This made sure that
+                                                                the enemy's only started moving when the player was in the same room as the enemy's. It also turned on the lights in the room to indicate that
+																this the room was "active".
 															</p>
 															<ul class="actions">
 																<li><a class="button" href="https://gist.github.com/BUCKERINO/a2cdf242f7199e51a3d84c8a76bcbd0d" target="_blank">Review code</a></li>
@@ -147,9 +148,10 @@
 																<h3 class="item-title">The gun</h3>
 															</header>
 															<p class="item-description">
-																For the gun, we wanted to be able to switch between multiple guns to add a bit of variety when killing the monsters. 
-                                                                In order to get this working, I made sure the guns were scriptable objects with a fire and reload function. This gave
-                                                                me the ability to make a script where I could load in the gun and have easy access to its functions.
+																For the gun, we wanted to be able to switch between multiple guns to add variety to our game when fighting the monsters. 
+                                                                In order to get this to work, I made the guns scriptable objects with some simple variables and reload- and shoot function.
+																With another script I could then make a serialize field where I could fill in the gun based on what the weapon the player chooses.
+                                                                In the same script I would then check for input from the player that would call the reload and shoot functions when the shoot or reload buttons were pressed.
 															</p>
 															<ul class="actions">
 																<li><a href="https://gist.github.com/BUCKERINO/e2ca7c46bf6d7399443d04c8ec7c4578" target="_blank"class="button">Review code</a></li>
@@ -172,9 +174,9 @@
 												<h3><a href="" class="link">NekoLow</a></h3>
 												<span class="project-subtitle">Unity3D · C# · Mobile · Alpha</span>
 												<p class="project-box"> 
-													NekoLow is a game for android devices. Jump down the sewer to
-                                                    get your delicious fish but be careful, there are monsters down there who have an 
-                                                    Appetite for cat.
+													NekoLow is a game for android devices. Jump down a sewer to
+                                                    get your delicious snack but be careful, there are monsters down there who have an 
+                                                    appetite for cat.
 												</p>
 											</header>
 										</figcaption>
@@ -192,11 +194,9 @@
 													<iframe width="1000" height="600" src="https://www.youtube.com/embed/sobSUbiOkZM?autoplay=1&mute=1&loop=1" frameborder="0" allowfullscreen></iframe>
 												</div>
 											<p class="portfolio-subtitle">
-												For this project, my brother and I worked together to make Nekolow. This was interesting because he had no
-                                                experience in game development whatsoever. But that didn't stop us. The game is inspired by a game called
-                                                downwell. You play as a cat that wants to get to the bottom of the well where a delicious snack is waiting
-                                                for it. During your fall, you encounter monsters that don't want you there and try to attack you. You kill
-                                                them by shooting them or jumping on them.
+												In this projcect, my brother and I worked together to make a mobile game. The game is inspired by a game called
+                                                downwell. You play as a cat that wants to get to the bottom of a well where a delicious snack is waiting
+                                                to be eaten. During your fall, you encounter monsters that don't want you there and try to close in on you and attack you.
 											</p>
 										</div>
 									</div> <!-- Close header-->
@@ -213,11 +213,12 @@
 															<h3 class="item-title">UIController</h3>
 														</header>
 														<p class="item-description">
-															For the controls of the UI, we wanted to use buttons on the screen to select your options.
-                                                            This came with a complication because you can't select a button with another button.
-                                                            To solve this issue, I put the menu buttons in an array. When left or right is pressed.
-                                                            An integer would increase and the color of the button would change based on what number
-                                                            the integer is. When you press the jump button, the invoke of the selected button gets called.
+															For the controls of the UI, we wanted to use the buttons that were on the screen to select an option.
+                                                            This came with a problem because you can't really select a button with a button.
+                                                            To solve this issue, I put the buttons of the menu in an array. This creates an order the buttons are in.
+															The order would be kept track of with an integer. When the integer would increase or decrease by pressing the left or right button,
+														 	the button in the menu would turn yellow based on the order they were in in the array and what number the integer is.
+															To select an option from the menu you can press the jump button. This would call the function of the selected button.
 														</p>
 														<ul class="actions">
 															<li><a href="https://gist.github.com/BUCKERINO/7b3e4dac7cd3cfe9834e5962a15ce53f" class="button" target="_blank">Review code</a></li>
@@ -235,10 +236,9 @@
 															<h3 class="item-title">Weapon Manager</h3>
 														</header>
 														<p class="item-description-left">
-															We wanted to make different weapons that you are able to pick up. To make this happen, I made a weapon manager
-                                                            script that manages what weapon is currently used and what its shoot behavior should be. If the player
-                                                            would shoot, the shoot method from the weapon script would be called. This script uses an interface called
-                                                            IProjectile so that it would be easier to make more weapons if wanted more.
+															We wanted to have different weapons that the player would be able to pick up. To make this happen, I made a weapon manager
+                                                            script that keeps track of what weapon the player is currently using. If the player presses the shoot button,
+                                                            the shoot function of the weapon that is being used would be called. This way we could have different weapons that act differently.
 														</p>
 														<ul class="actions">
 															<li><a href="https://gist.github.com/BUCKERINO/c8297f7b4dea58cdcf59298c97279bf6" target="_blank" class="button">Review code</a></li>
@@ -256,10 +256,9 @@
 															<h3 class="item-title">Jump on enemies</h3>
 														</header>
 														<p class="item-description">
-															Just like a lot of other platform games, we wanted to let the player jump on
-                                                            enemies to kill them. When landed on the enemy they get destroyed and the player
-                                                            gets launched upwards a little to show that the player bounced on the enemy.
-                                                            A little particle effect is added to make it look a little bit nicer.
+															We wanted to let the player to be able to jump on enemies in order to defeat them. When landed on an enemy, they get destroyed and the player
+                                                            gets launched upwards a little to indicate that the player bounced on the enemy.
+                                                            A little particle effect is added to make it look a little bit cooler.
 														</p>
 														<ul class="actions">
 															<li><a  a href="https://gist.github.com/BUCKERINO/b57f735c7ba0906b1cd410fedeb6c64f" target="_blank" class="button">Review code</a></li>
@@ -284,7 +283,7 @@
 											</h3>
 											<span class="project-subtitle">Unity3D · C# · PC · Alpha</span>
 											<p class="project-box"> 
-												Make me laugh game is a card game. Be the funny man you always wanted
+												Make me laugh is a card game. Be the funny man you always wanted
                                                 to be by making the demon laugh, but be careful not to make the wrong
                                                 jokes though.
 											</p>
@@ -300,7 +299,7 @@
 										<h1 class="portfolio-title">Make me laugh</h1>
 										<p class="portfolio-subtitle">
 											Make me laugh is the first game jam I participated in.
-                                            The theme was make me laugh. We were in a group of 8 
+                                            The theme was make me laugh. We were in a group of eight 
                                             people and we had two days to make a game. The game
                                             is inspired by a game by the name of shotgun roulette 
                                             where you play shotgun roulette with an eldritch monster.
@@ -324,12 +323,10 @@
 														<h3 class="item-title">Generating the cards</h3>
 													</header>
 													<p class="item-description">
-														We wanted the cards to be 3D objects and to make sure that it was
-                                                        easy to change around its values. To make this happen, I made
-                                                        scriptable objects of the cards that can hold the information
-                                                        of the card. These cards are put into a list and card objects
-                                                        get made for every scriptable object in the list. Once they were
-                                                        created they were removed from the list.
+														We wanted the cards to be 3D objects to fit with the 3D theme of the game. 
+														To make this happen, I made scriptable objects of the cards that can hold the information of the card. 
+														These cards are put into a list and card objects get made for every scriptable object in the list. 
+														Once they were created they were removed from the list to show so that there wouldnt be an infinate amount of cards being generated.
 													</p>
 													<ul class="actions">
 														<li><a href="https://gist.github.com/BUCKERINO/3d90f5686f9bf7b5917581752642c347" class="button" target="_blank">Review code</a></li>
@@ -347,10 +344,10 @@
 														<h3 class="item-title">Cards moving to your hand</h3>
 													</header>
 													<p class="item-description-left">
-														We thought it would be cool to make the cards move from a deck to
-                                                        the players hand. I accomplished this by having three empty
-                                                        objects in an array and then move the cards to their position
-                                                        with a for loop.
+														We thought it would be cool to make the cards move from a deck of cards to
+                                                        the hands of the player. I accomplished this by having three empty objects in the scene and put them in an array.
+														Then when the game starts or the player would get a new set of cards in his hands, the cards would move towards the positions
+														of the empty objects with a for loop to keep track of which card would move to which empty object.
 													</p>
 													<ul class="actions">
 														<li><a href="https://gist.github.com/BUCKERINO/af8f707c886cbf88187a5a0c175607ab" target="_blank" class="button">Review code</a></li>
@@ -369,12 +366,10 @@
 													</header>
 													<p class="item-description">
 														We also needed to have a way to select the card to make
-                                                        the joke. I accomplished this by having them move up when
-                                                        the mouse hovered over a card. This makes it easier to
-                                                        see which card you're going to select and what the card says.
+                                                        the joke. I accomplished this by moving the cards up when
+                                                        the mouse hovered over a card to indicate what card the player would be selecting.
                                                         If you then select the card that you want to use, a value
-                                                        would be checked called funnyModifier to see if the card
-                                                        if the joke is funny or not. If the value is +1, the joke
+                                                        would be checked called the funnyModifier to see if the joke on the card is funny or not. If the value is +1, the joke
                                                         is considered funny, 0 if the joke was not that funny but
                                                         not that bad either, and -1 if the joke was bad.
 													</p>
@@ -394,7 +389,7 @@
 														<h3 class="item-title">AudioManager</h3>
 													</header>
 													<p class="item-description-left">
-														We also needed some audio to set the mood. For this, I made 
+														We also needed some audio to set the mood. For this, I made a different class called sounds and made an array of it.
                                                         an array of Sounds. These sounds had some values, you could
                                                         change. Then in the audio manager script new audio
                                                         source components are made from those values. Lastly the
