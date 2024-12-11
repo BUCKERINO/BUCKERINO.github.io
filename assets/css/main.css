@@ -24,6 +24,8 @@ section, summary, time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	scrollbar-width: thin;
+	scrollbar-color: rgba(156, 156, 156, 0.5);
 }
 
 article, aside, details, figcaption, figure,
@@ -122,7 +124,7 @@ input, select, textarea {
 		font-size: 17pt;
 		font-weight: 300;
 		letter-spacing: 0.025em;
-		line-height: 1.65;
+		line-height: 1.5;
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -259,20 +261,6 @@ input, select, textarea {
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
 	}
-
-	pre {
-		-webkit-overflow-scrolling: touch;
-		font-family: "Courier New", monospace;
-		font-size: 0.9em;
-		margin: 0 0 2em 0;
-	}
-
-		pre code {
-			display: block;
-			line-height: 1.75;
-			padding: 1em 1.5em;
-			overflow-x: auto;
-		}
 
 	hr {
 		border: 0;
@@ -2548,7 +2536,7 @@ input, select, textarea {
 		transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 		background-color: transparent;
 		border: 0;
-		border-radius: 0;
+		border-radius: 10px;
 		box-shadow: inset 0 0 0 2px #ffffff;
 		color: #ffffff;
 		cursor: pointer;
@@ -2556,7 +2544,7 @@ input, select, textarea {
 		font-size: 0.8em;
 		font-weight: 600;
 		height: 3.5em;
-		letter-spacing: 0.25em;
+		letter-spacing: 0.20em;
 		line-height: 3.5em;
 		padding: 0 1.75em;
 		text-align: center;
